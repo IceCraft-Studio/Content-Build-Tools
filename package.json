@@ -1,0 +1,29 @@
+{
+  "name": "icecraft-studio-build-tools",
+  "version": "1.0.0",
+  "description": "Build tools designed to automate the process of creating content for Minecraft: Bedrock Edition made by IceCraft Studio.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IceCraft-Studio/Content-Build-Tools.git"
+  },
+  "keywords": [
+    "icecraftstudio",
+    "icecraft",
+    "minecraft",
+    "minecraftbedrock",
+    "content",
+    "packs",
+    "addons",
+    "scripts"
+  ],
+  "author": "PavelDobCZ23",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/IceCraft-Studio/Content-Build-Tools/issues"
+  },
+  "homepage": "https://github.com/IceCraft-Studio/Content-Build-Tools#readme"
+}
