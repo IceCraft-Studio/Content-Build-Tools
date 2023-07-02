@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/IceCraft-Studio/Content-Build-Tools/issues"
   },
-  "homepage": "https://github.com/IceCraft-Studio/Content-Build-Tools#readme"
+  "homepage": "https://github.com/IceCraft-Studio/Content-Build-Tools#readme",
+  "dependencies": {
+    "adm-zip": "^0.5.10"
+  }
 }
