@@ -27,6 +27,8 @@
   },
   "homepage": "https://github.com/IceCraft-Studio/Content-Build-Tools#readme",
   "dependencies": {
-    "adm-zip": "^0.5.10"
+    "adm-zip": "^0.5.10",
+    "type-flag": "^3.0.0",
+    "uuid": "^9.0.0"
   }
 }

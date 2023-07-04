@@ -46,4 +46,5 @@ function fileExclusion(filePath) {
     return false;
 }
 
+
 main('D:\\Minecraft\\projects\\resource_packs\\negative-colors\\');

@@ -1,22 +1,27 @@
-const Fs = require('fs');
-const Path = require('path');
+const Fs = require('node:fs');
+const Path = require('node:path');
 const { readdirRecursive } = require('../js_modules/fs');
 
 class Project {
     constructor(path) {
-        this.projectData = JSON.parse(Fs.readFileSync(Path.join(path, '/mcproject.json')).toString());
+        this.#projectPath = Path.resolve(path);
+        this.#projectData = JSON.parse(Fs.readFileSync(Path.join(path, '/mcproject.json')).toString());
     }
 
     get id() {
-        return this.projectData.config.id;
+        return this.#projectData.config.id;
     }
 
     get name() {
-        return this.projectData.config.name;
+        return this.#projectData.config.name;
+    }
+
+    get path() {
+        return this.#projectPath;
     }
 
     get version() {
-        return this.projectData.config.version;
+        return this.#projectData.config.version;
     }
 
     get displayVersion() {
@@ -32,10 +37,27 @@ class Project {
             callback(filePath, relativePath, relativeDirectory);
         });
     }
+
+    #validateProjectDir() {
+        return (
+            Fs.existsSync(Path.join(this.path,'/mcproject.json')) &&
+            Fs.existsSync(Path.join(this.path, '/src/'))
+        );
+    }
+
+    #validateProjectData() {
+    }
+
+
+    #projectData;
+
+    static globalConfig() {
+        return JSON.parse(Fs.readFileSync('D:/Minecraft/projects/config.json').toString());
+    }
 }
 
 function fileExclusion(filePath) {
     return false;
 }
 
-module.exports = { Project };
+module.exports = { Project, globalConfig };
